@@ -7,7 +7,7 @@ import { MetadataKeys } from './MetadataKeys';
 function bodyValidator(keys: string): RequestHandler {
   return function(req: Request, res: Response, next: NextFunction) {
     if (!req.body) {
-      res.status(422).send(`Missing property ${key}`);
+      res.status(422).send(`Missing property ${keys}`);
       return;
     }
 
